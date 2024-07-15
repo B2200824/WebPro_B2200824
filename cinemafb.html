@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Food and Beverages Order</title>
+    <link rel="stylesheet" href="stylefb.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cinema Food and Beverages Order</h1>
+        <form id="orderForm" action="process_order.php" method="post">
+            <div class="item">
+                <img src="popcorn.jpeg" alt="Popcorn" class="item-image">
+                <div class="item-details">
+                    <h2>Popcorn</h2>
+                    <p>Price: $5.00</p>
+                    <label for="popcorn-quantity">Quantity:</label>
+                    <input type="number" id="popcorn-quantity" name="popcorn-quantity" min="0" value="0">
+                </div>
+            </div>
+            <div class="item">
+                <img src="soda.jpg" alt="Soda" class="item-image">
+                <div class="item-details">
+                    <h2>Soda</h2>
+                    <p>Price: $3.00</p>
+                    <label for="soda-quantity">Quantity:</label>
+                    <input type="number" id="soda-quantity" name="soda-quantity" min="0" value="0">
+                </div>
+            </div>
+            <div class="item">
+                <img src="nachos.jpg" alt="Nachos" class="item-image">
+                <div class="item-details">
+                    <h2>Nachos</h2>
+                    <p>Price: $4.50</p>
+                    <label for="nachos-quantity">Quantity:</label>
+                    <input type="number" id="nachos-quantity" name="nachos-quantity" min="0" value="0">
+                </div>
+            </div>
+            <button type="submit" class="order-button">Place Order</button>
+        </form>
+    </div>
+    <script src="order.js"></script>
+</body>
+</html>

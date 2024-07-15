@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="seatdeco.css">
+    <title>Seat Booking</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bad Boys: Ride Or Die</h1>
+        <div class="screen">SCREEN</div>
+        <div class="seats">
+            <!-- Seats will be generated dynamically by JavaScript -->
+        </div>
+
+        <div class="legend">
+            <div><div class="seat"></div> Available</div>
+            <div><div class="seat selected"></div> Selected</div>
+            <div><div class="seat occupied"></div> Occupied</div>
+        </div>
+        
+        <form action="submit_seat.php" method="post" id="seatForm" onsubmit="redirectToCinemafb(event)">
+            <div class="form-group">
+                <label for="selected-seats">Selected Seats:</label>
+                <input type="text" id="selected-seats" name="seats" readonly>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Book Now" id="bookNowButton" class="book-now-button">
+            </div>
+        </form>
+        
+        <div class="price">Total Price: RM<span id="total-price">0.00</span></div>
+    </div>
+
+    <script src="seatbooking.js"></script>
+    <script>
+        function redirectToCinemafb(event) {
+            event.preventDefault(); // Prevent default form submission
+            document.getElementById("seatForm").submit(); // Submit the form
+            window.location.href = "cinemafb.html"; // Redirect to cinemafb.html
+        }
+    </script>
+</body>
+</html>

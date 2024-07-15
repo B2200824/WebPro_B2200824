@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign Up</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Ensure content flows in a column */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start of the viewport */
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+    width: 100%; /* Occupy full width of the viewport */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #555;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 20px; /* Adjust the margin to create space between header and container */
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: red;
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.toggle-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-btn a {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    position: fixed; /* Fixed positioning to keep it at the bottom */
+    bottom: 0;
+    background-color: #111;
+    padding: 10px 0;
+    border-top: 3px solid red;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Clubs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="container" id="login-container">
+            <h2>Login</h2>
+            <form id="login-form" method="POST" action="login_signup.php">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn" name="login">Login</button>
+            </form>
+            <div class="toggle-btn">
+                <p>Don't have an account? <a id="show-signup">Sign Up</a></p>
+                <p><a href="forgot_password.php">Forgot Password?</a></p>
+            </div>
+        </div>
+
+        <div class="container" id="signup-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form" method="POST" action="login_signup.php">
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <button type="submit" class="btn" name="signup">Sign Up</button>
+            </form>
+            <div class="toggle-btn">
+                <p>Already have an account? <a id="show-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('show-signup').addEventListener('click', function() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('signup-container').style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', function() {
+            document.getElementById('signup-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

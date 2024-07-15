@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Membership Points</title>
+    <link rel="stylesheet" href="vipclub.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Clubs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Membership Dashboard</h1>
+            <p>Welcome to your membership dashboard. Here you can view your current points and other details.</p>
+        </div>
+        <div class="points-section">
+            <h2>Your Current Points</h2>
+            <p class="points" id="points">200</p>
+        </div>
+        <!-- User Profile -->
+        <div class="profile-section">
+            <img src="avatar.png" alt="User Avatar" class="avatar">
+            <h2>User Name</h2>
+            <div class="status-section">
+                <h2>Your Membership Status</h2>
+                <p class="status" id="status">Active</p>
+            </div>
+        </div>
+
+        <!-- Points Summary -->
+        <div class="points-summary">
+            <h3>Points Summary</h3>
+            <p>Current Points: 200</p>
+            <p>Points Earned This Month: 500</p>
+            <p>Points Redeemed: 100</p>
+        </div>
+
+        <!-- Apply Points to Purchases -->
+        <div class="apply-points">
+            <h3>Apply Points</h3>
+            <form id="apply-points-form" method="POST">
+                <label for="points-to-apply">Points to Apply:</label>
+                <input type="number" id="points-to-apply" name="points-to-apply" min="0" max="1500">
+                <button type="submit">Apply</button>
+            </form>
+            <p id="apply-message"></p>
+        </div>
+
+        <!-- Membership Benefits -->
+        <div class="membership-benefits">
+            <h3>Membership Benefits</h3>
+            <ul>
+                <li>10% off on all tickets</li>
+                <li>Free popcorn on weekends</li>
+                <li>Exclusive screenings</li>
+            </ul>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="recent-transactions">
+            <h3>Recent Transactions</h3>
+            <ul>
+                <li>Purchased: 2 Tickets - Earned 50 points</li>
+                <li>Redeemed: Free Popcorn - Used 50 points</li>
+                <li>Purchased: 1 Ticket - Earned 25 points</li>
+            </ul>
+        </div>
+
+        <!-- Rewards Catalog -->
+        <div class="rewards-catalog">
+            <h3>Rewards Catalog</h3>
+            <form method="POST">
+                <div class="reward-item">
+                    <img src="free-ticket.png" alt="Free Ticket">
+                    <p>Free Ticket - 100 points</p>
+                    <input type="hidden" name="reward" value="Free Ticket">
+                    <input type="hidden" name="redeem-points" value="100">
+                    <button type="submit">Redeem</button>
+                </div>
+                <div class="catalog-section">
+                    <div class="reward-item">
+                        <img src="free-popcorn.png" alt="Free Popcorn">
+                        <p>Free Popcorn - 50 points</p>
+                        <input type="hidden" name="reward" value="Free Popcorn">
+                        <input type="hidden" name="redeem-points" value="50">
+                        <button type="submit">Redeem</button>
+                    </div>
+                </div>
+            </form>
+            <p id="redeem-message"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

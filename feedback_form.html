@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED Cinema Feedback</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        select,
+        textarea,
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+        .description {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px; /* Added gap after the description */
+        }
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 3px solid red;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        header {
+            background-color: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 3px solid red;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+        header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Clubs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Red Cinema Feedback</h1>
+        <p class="description">We value your feedback! Please fill out this form to let us know about your cinema experience.</p>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="booking-experience">How was your booking experience?</label>
+            <select id="booking-experience" name="booking_experience" required>
+                <option value="">Select an option</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="cinema-experience">How was your in-cinema experience?</label>
+            <select id="cinema-experience" name="cinema_experience" required>
+                <option value="">Select an option</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="food-beverage">How was the food and beverage?</label>
+            <select id="food-beverage" name="food_beverage" required>
+                <option value="">Select an option</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="staff">How was the overall website?</label>
+            <select id="staff" name="staff" required>
+                <option value="">Select an option</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="5"></textarea>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

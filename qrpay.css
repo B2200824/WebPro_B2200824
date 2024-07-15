@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+.proceed-button {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 15px; /* Smaller padding */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px; /* Smaller font size */
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Space above button */
+}
+
+.proceed-button:hover {
+    background-color: #B71C1C;
+}
+
+img {
+    width: 300px; /* QR code size */
+    height: auto;
+    border: 5px solid #FF0000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white; /* QR code background */
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #111;
+    border-top: 3px solid red;
+    position: absolute; /* Position footer at the bottom */
+    bottom: 0;
+}

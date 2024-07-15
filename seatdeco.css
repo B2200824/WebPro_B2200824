@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 80%;
+    background: rgba(253, 253, 253, 0);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+.screen {
+    background: #ffffff;
+    height: 50px;
+    margin: 20px 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.seats {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+.seat {
+    background: #ffffff;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.seat.selected {
+    background: #6feaf6;
+}
+.seat.occupied {
+    background: #e11a1a;
+    cursor: not-allowed;
+}
+.seat:nth-child(8n+1) {
+    margin-right: 20px;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    color:#f8f2f2;
+}
+.sea{
+    color:#f4f4f4
+}
+.legend div {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.legend .seat {
+    margin-right: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+label, input, button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+button {
+    background: #f40000;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #f4f4f4;
+}
+.price {
+    text-align: center;
+    margin-top: 10px;
+    color:#f4f4f4
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #ff0000;
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #FF0000;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.book-now-button:hover {
+    background-color: #B71C1C;
+}

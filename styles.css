@@ -1,0 +1,150 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: red;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.movies {
+    padding: 20px;
+}
+
+.movies h2 {
+    text-align: center;
+    font-size: 37px;
+    color: red;
+}
+
+.movies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #222;
+    border: 1px solid #444;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie h3 {
+    color: red;
+    margin: 10px 0;
+}
+
+.booking {
+    padding: 20px;
+    background-color: #111;
+    border-top: 3px solid red;
+}
+
+.booking h2 {
+    text-align: center;
+    font-size: 36px;
+    color: red;
+}
+
+.booking form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.booking label {
+    margin-top: 10px;
+}
+
+.booking input, .booking select, .booking button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid red;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.btn-red {
+    background-color: red;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: normal !important;  /* Add !important */
+}
+
+.btn-red:hover {
+    background-color: #ff4d4d;
+}

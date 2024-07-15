@@ -1,0 +1,99 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+    color: red;
+}
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid red;
+}
+footer p {
+    margin: 5px 0;
+}
+.btn-red {
+    background-color: red;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.profile-section, .points-summary, .apply-points, .membership-benefits, .recent-transactions, .rewards-catalog {
+    background:black;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.reward-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.reward-item img {
+    width: 50px;
+    margin-right: 1em;
+}
+button {
+    padding: 0.5em 1em;
+    background-color:red;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color:white;
+}
+
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}

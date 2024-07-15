@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Event</title>
+    <link rel="stylesheet" href="eventstyles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 3px solid rgb(248, 0, 0);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+            padding-left: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        header h1 {
+            margin: 0;
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .event {
+            background-color: #333;
+            border: 1px solid red;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-image {
+            width: 200px; /* Increased width */
+            height: 200px; /* Increased height */
+            margin-right: 20px;
+        }
+
+        .event-details {
+            text-align: left;
+            flex: 1;
+        }
+
+        .event-details h3 {
+            color: red;
+            margin: 0;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        .register-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .register-btn:hover {
+            background-color: darkred;
+        }
+
+        .register-link {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            background-color: darkred;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 3px solid red;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Clubs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h2>Welcome to Our Cinema Events</h2>
+            <p>Join us for an unforgettable movie experience with exclusive events, screenings, and more!</p>
+        </section>
+        <section id="events" class="section">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <img src="event1.jpg" alt="Event 1" class="event-image">
+                <div class="event-details">
+                    <h3>Exclusive Discount</h3>
+                    <p>Date: July 10 - 15</p>
+                    <p>Time: 8:00 AM - 2:00 PM</p>
+                    <p>Location: Red Cinema</p>
+                    <p>Description: Having Exclusive Discount on movies and food and beverages!!!</p>
+                    <a href="index.html" class="register-link">Register</a>
+                </div>
+            </div>
+            <div class="event">
+                <img src="event2.jpg" alt="Event 2" class="event-image">
+                <div class="event-details">
+                    <h3>Premiere Night</h3>
+                    <p>Date: July 20, 2024</p>
+                    <p>Time: 7:00 PM</p>
+                    <p>Location: Cinema Hall 2</p>
+                    <p>Description: Be the first to watch the latest <span class="highlight">Bad Boys Ride Or Die</span> movie on premiere night. Red carpet event with celebrity appearances!</p>
+                    <a href="index2.html" class="register-link">Register</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

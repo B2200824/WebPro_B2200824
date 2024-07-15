@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Club - Cinema Booking</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px solid red;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.vip-section {
+    background-color: #222;
+    padding: 20px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Reduced max-width */
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+.vip-section h2 {
+    color: red;
+    font-size: 2em; /* Increase the heading size */
+}
+
+.vip-section p {
+    margin: 20px 0;
+}
+
+.vip-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.vip-section ul li {
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Increase button size */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-top: 30px; /* Add margin to position button lower */
+}
+
+.button:hover {
+    background-color: #b71c1c;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid red;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Club</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="vip-section">
+            <h2>VIP Club</h2>
+            <p>Unlock exclusive benefits with our VIP Club membership!</p>
+            <nav>
+                <li>Early access to movie tickets</li>
+                <li>Reserved seating options</li>
+                <li>Discounts on concessions</li>
+                <li>Special invites to premieres and events</li>
+            </nav>
+            <p>Join our VIP Club today and elevate your cinema experience!</p>
+            <a href="membership_points.html" class="button">Join Now</a>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

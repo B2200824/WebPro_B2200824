@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <header>
+        <div class="logo">RED Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vipclub.html">VIP Clubs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="feedback_form.html">Feedback</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-2">Bad Boys: Ride or Die</h1>
+            <img src="movie1.jpg" alt="Movie Poster" width="50%" height="600">
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="movie-details mb-3">
+                    <h2 class="text-red">Description:</h2>
+                    <p>When their late police captain gets linked to drug cartels, wisecracking Miami cops Mike Lowrey and Marcus Burnett embark on a dangerous mission to clear his name.</p>
+                    <h2 class="text-red">IMDB Rating:</h2>
+                    <p>7/10</p>
+                    <h2 class="text-red">Cast:</h2>
+                    <p>Will Smith, Martin Lawrence, Vanessa Hudgens</p>
+                    <h2 class="text-red">Distributed by:</h2>
+                    <p>Sony Pictures Entertainment Japan</p>
+                    <h2 class="text-red">Directors:</h2>
+                    <p>Adil El Arbi, Bilall Fallah</p>
+                    <h2 class="text-red">Genres:</h2>
+                    <div id="genres">
+                        <span class="genre-box">Action</span>
+                        <span class="genre-box">Adventure</span>
+                        <span class="genre-box">Comedy</span>
+                    </div>
+                </div>
+
+                <div class="movie-trailer mb-3 text-center">
+                    <iframe id="trailer-video" width="100%" height="315" src="https://www.youtube.com/embed/videoid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="user-interactions">
+                    <h2>Rate this Movie</h2>
+                    <div class="rating mb-3">
+                        <span class="star" data-value="1">☆</span>
+                        <span class="star" data-value="2">☆</span>
+                        <span class="star" data-value="3">☆</span>
+                        <span class="star" data-value="4">☆</span>
+                        <span class="star" data-value="5">☆</span>
+                    </div>
+
+                    <h2>Comments</h2>
+                    <form method="POST" action="comments.php">
+                        <div class="comments-section mb-3">
+                            <input type="text" name="username" id="username-input" class="form-control mb-2" placeholder="Enter your name" required>
+                            <input type="hidden" name="rating" id="rating-input" class="form-control mb-2" value="0">
+                            <textarea name="comment" id="comment-input" class="form-control mb-2" placeholder="Write your comment here..." required></textarea>
+                            <button type="submit" id="submit-comment" class="btn btn-danger">Submit</button>
+                        </div>
+                    </form>
+                    
+                    <div class="book-now mb-5 text-center">
+                        <a href="seat.html" class="btn btn-danger btn-lg">Book Now</a>
+                    </div>
+
+                    <h2>Customer Comments</h2>
+                    <div id="customer-comments"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="movie1.js"></script>
+    
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const ratingValue = star.getAttribute('data-value');
+                document.getElementById('rating-input').value = ratingValue;
+
+                // Highlight stars
+                stars.forEach(s => {
+                    s.textContent = s.getAttribute('data-value') <= ratingValue ? '★' : '☆';
+                });
+            });
+        });
+
+        // Fetch existing comments
+        fetch('comments.php')
+            .then(response => response.json())
+            .then(data => {
+                const commentsContainer = document.getElementById('customer-comments');
+                data.forEach(comment => {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.classList.add('comment');
+                    commentDiv.innerHTML = `<strong>${comment.username}</strong> (${comment.rating}): <p>${comment.comment}</p>`;
+                    commentsContainer.appendChild(commentDiv);
+                });
+            });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Cinema Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
